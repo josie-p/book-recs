@@ -4,14 +4,14 @@ import { listSomeDataAPI } from "./api-adapter";
 import listData from "./";
 
 const Home = () => {
-    const [theData, setTheData] = useState({});
+    const [theData, setTheData] = useState([]);
     const [categories, setCategories] = useState([]);
     const navigate = useNavigate();
 
     const getTheData = async() => {
         const response = await listSomeDataAPI();
         console.log(response, "this is the response i got!");
-        setTheData(response.volumeInfo);
+        setTheData(response);
         loopThrough();
         setCategories(response.volumeInfo.categories)
         // loopThrough();
@@ -33,10 +33,11 @@ const Home = () => {
 
     return(
         <div>
-            {/* <h1>let's find some books!</h1>
+             <h1>let's find some books!</h1>
             <button onClick={() => {
                 getTheData();
             }}>click here for info</button>
+            {/*
              <p>here's a test!</p>
             {
                 theData ?
