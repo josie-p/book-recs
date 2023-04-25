@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Navbar, Home } from "./";
+import { Navbar, Home, ChooseCategories } from "./";
 
 const Main = () => {
     return(
@@ -14,6 +14,7 @@ const Main = () => {
                     <Home/>
                 }
                 />
+                <Route exact path="/choose-categories" element={<ChooseCategories/>} />
             </Routes>
         </div>
     )
