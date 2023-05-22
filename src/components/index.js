@@ -7,3 +7,4 @@ export { default as listData } from "./listData";
 export { default as ChooseCategories } from "./ChooseCategories";
 export { default as Romance } from "./Romance";
 export { default as FinalRec } from  "./FinalRec";
+export { default as LoadingRec } from "./LoadingRec";

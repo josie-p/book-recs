@@ -3,7 +3,7 @@ const BASE_URL = "https://www.googleapis.com/books/v1"
 // ?q=flowers+inauthor:keyes&key=AIzaSyCOrX_yc8s1wxOdLJzeiqYogEUuIuKTfFk
 
 export const listSomeDataAPI = async() => {
-    const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=dark+romance+subject&maxResults=40&key=AIzaSyCOrX_yc8s1wxOdLJzeiqYogEUuIuKTfFk`, 
+    const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=new+adult+mystery+second+chance+romance+subject&maxResults=40&key=AIzaSyCOrX_yc8s1wxOdLJzeiqYogEUuIuKTfFk`, 
         {
             method: "GET", 
             headers: {
