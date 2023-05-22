@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ChooseCategories = () => {
 
@@ -9,7 +10,7 @@ const ChooseCategories = () => {
         <div>
             <h1>choose categories page!</h1>
             <div>
-                <button>i need a romance</button>
+                <Link to="/romance"><button>i need a romance</button></Link>
                 <button>i need a mystery</button>
                 <button>i need some fantasy</button>
                 <button>i need some science fiction</button>
