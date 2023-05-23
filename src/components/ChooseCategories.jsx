@@ -5,20 +5,19 @@ const ChooseCategories = () => {
 
     const [genres, setGenres] = useState([]);
 
-    // console.log(document.getElementById("comedy").value, "value of comedy button")
     return (
         <div>
             <h1>choose categories page!</h1>
             <div>
                 {/* this is where all of the initial, broad subjects are being listed and linked to. */}
-                <Link to="/"><button>Fiction</button></Link>
-                <Link to="/"><button>Young Adult Fiction</button></Link>
-                <Link to="/"><button>Nonfiction</button></Link>
-                <Link to="/"><button>Romance</button></Link>
-                <Link to="/"><button>Fantasy</button></Link>
-                <Link to="/"><button>Mystery</button></Link>
-                <Link to="/"><button>Graphic Novel</button></Link>
-                <Link to="/"><button>Science Fiction</button></Link>
+                <Link to="/fantasy"><button>Fantasy</button></Link>
+                <Link to="/fiction"><button>Fiction</button></Link>
+                <Link to="/graphic-novel"><button>Graphic Novel</button></Link>
+                <Link to="/mystery"><button>Mystery</button></Link>
+                <Link to="/nonfiction"><button>Nonfiction</button></Link>
+                <Link to="/romance"><button>Romance</button></Link>
+                <Link to="/science-fiction"><button>Science Fiction</button></Link>
+                <Link to="/ya"><button>Young Adult Fiction</button></Link>
                 {console.log(genres, "genres array")}
             </div>
         </div>
