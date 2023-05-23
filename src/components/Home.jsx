@@ -9,7 +9,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     const getTheData = async() => {
-        const response = await listSomeDataAPI();
+        const response = await listSomeDataAPI(["contemporary", "dark", "romance"]);
         console.log(response, "this is the response i got!");
         setTheData(response);
         loopThrough();
