@@ -15,13 +15,44 @@ const Fantasy = () => {
 
     //function to add/take away from the array:
     const changeSubjects = (term) => {
+
+        // const checkIfExists = subjects.includes("high");
+        const checkIfExists = subjects.indexOf(term);
+
+        // subjects.unshift("silly");
+
+        // console.log("just a test", subjects);
+
+        if(checkIfExists === -1){
+            //add term to the front of the array
+            // setSubjects(subjects.push(term));
+            subjects.unshift(term)
+
+            console.log(subjects, "subjects array if array does not include term!");
+        }else{
+            //get the index of the term:
+            const indexOfTerm = subjects.indexOf(term);
+
+            //double check to make sure that the term does exist in the array!
+            if(indexOfTerm !== -1){
+                //take term out of subjects array
+                setSubjects(subjects.splice(indexOfTerm, 1));
+            }
+
+            console.log(subjects, "subjects array if the term did exist in the array!");
+
+        }
+
+
+
+
         // const termExists = subjects.indexOf(term);
 
         // if(termExists){
 
         // }
 
-        console.log(subjects, "og subjects array");
+        // console.log(subjects, "og subjects array");
 
 
         // const checkedArr = subjects.filter((subject) => {
@@ -35,13 +66,13 @@ const Fantasy = () => {
 
         // console.log(checkedArr, "after arr is filtered; checked array");
 
-        if(!subjects.includes(term)){
-            setSubjects(subjects.unshift(term));
-        }else{
+        // if(!subjects.includes(term)){
+        //     setSubjects(subjects.unshift(term));
+        // }else{
             //take subject off
-        }
+        // }
 
-        console.log(subjects, "subjects after unshift");
+        // console.log(subjects, "subjects after unshift");
 
     }
 
