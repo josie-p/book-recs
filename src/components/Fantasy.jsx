@@ -19,6 +19,7 @@ const Fantasy = () => {
 
     //function to add/take away from the array:
     const changeSubjects = (term) => {
+        //try some stuff out with a filter
 
         // setSubjects(subjects.unshift("fantasy"));
 
