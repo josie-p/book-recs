@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Navbar, Home, ChooseCategories, Romance, FinalRec, Fantasy } from "./";
+import { Navbar, Home, ChooseCategories, Romance, FinalRec, Fantasy, FantasyTest } from "./";
 
 const Main = () => {
     return(
@@ -17,6 +17,7 @@ const Main = () => {
                 <Route exact path="/choose-categories" element={<ChooseCategories/>} />
                 <Route exact path="/romance" element={<Romance/>} />
                 <Route exact path="/fantasy" element={<Fantasy/>} />
+                <Route exact path="/fantasy-test" element={<FantasyTest/>} />
                 <Route exact path="/your-recommendation" element={< FinalRec/>}/>
             </Routes>
         </div>

@@ -43,7 +43,8 @@ const Fantasy = () => {
             console.log(subjects, "subjects before unshift!");
 
             // subjects.unshift(term)
-            setSubjects(subjects.unshift(term));
+            let newArray = [term, ...subjects];
+            setSubjects(newArray);
 
             console.log(subjects, "subjects array if array does not include term!");
         }else{
@@ -56,6 +57,9 @@ const Fantasy = () => {
             //double check to make sure that the term does exist in the array!
             if(indexOfTerm !== -1 && subjects.includes(term)){
                 // take term out of subjects array
+                let newArray = [...subjects];
+                newArray.splice(indexOfTerm, 1);
+                setSubjects(newArray)
                 console.log(setSubjects(subjects.slice(indexOfTerm, indexOfTerm + 1)), "if statement in else");
                 // setSubjects(subjects.slice(indexOfTerm, indexOfTerm + 1));
             }
