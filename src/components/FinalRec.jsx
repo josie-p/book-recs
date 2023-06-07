@@ -17,6 +17,8 @@ const FinalRec = () => {
     const getRec = async() => {
         const subjects = Object.values(data);
 
+        console.log(subjects, "subjects from FinalRec in getrec func");
+
         const response = await listSomeDataAPI(subjects);
 
         const randNum = getRandNum();

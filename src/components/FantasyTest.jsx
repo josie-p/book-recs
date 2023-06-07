@@ -40,7 +40,7 @@ const FantasyTest = () => {
     }
 
     const prepareData = (arr) => {
-         if(arr.length >= 1){
+         if(arr.length > 1){
              for(let i = 0; i < arr.length; i++){
                  data["subject" + [i]] = arr[i];
              }
