@@ -10,7 +10,7 @@ const ChooseCategories = () => {
             <h1>choose categories page!</h1>
             <div>
                 {/* this is where all of the initial, broad subjects are being listed and linked to. */}
-                <Link to="/fantasy"><button>Fantasy</button></Link>
+                <Link to="/fantasy-test"><button>Fantasy</button></Link>
                 <Link to="/fiction"><button>Fiction</button></Link>
                 <Link to="/graphic-novel"><button>Graphic Novel</button></Link>
                 <Link to="/mystery"><button>Mystery</button></Link>

@@ -4,7 +4,15 @@ const BASE_URL = "https://www.googleapis.com/books/v1"
 
 export const listSomeDataAPI = async(subjectArr) => {
 
-    const subjectStr = subjectArr.join("+");
+    let subjectStr = "";
+
+    if(subjectArr.length >= 1){
+         subjectStr = subjectArr.join("+");
+    }
+     if(subjectArr.length === 1){
+     subjectStr = subjectArr[0];
+    }
+
 
     const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${subjectStr}+subject&maxResults=40&key=AIzaSyCOrX_yc8s1wxOdLJzeiqYogEUuIuKTfFk`, 
         {

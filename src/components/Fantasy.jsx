@@ -116,7 +116,7 @@ const Fantasy = () => {
                 <button>contemporary fantasy</button>
             </div>
             <div>
-                <button>get your recommendation</button>
+                <button >get your recommendation</button>
             </div>
         </div>
     )

@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const FantasyTest = () => {
+
+    const navigate = useNavigate();
+
+    let data = {};
 
     const initArray = ["fantasy"]
 
@@ -34,6 +39,18 @@ const FantasyTest = () => {
 
     }
 
+    const prepareData = (arr) => {
+         if(arr.length >= 1){
+             for(let i = 0; i < arr.length; i++){
+                 data["subject" + [i]] = arr[i];
+             }
+         }else if(arr.length === 1){
+            data["subject0"] = arr[0];
+         }
+
+        console.log(data, "object in prepare data");
+    }
+
     return (
         <div>
             <h1>fantasy 2</h1>
@@ -46,6 +63,16 @@ const FantasyTest = () => {
                 }}>urban fantasy</button>
                 <button>dark fantasy</button>
                 <button>contemporary fantasy</button>
+                <button
+                onClick = {() => {
+                    prepareData(subjects);
+                    console.log(data, "data object")
+                    setTimeout(() => {
+                        console.log("navigating!");
+                        navigate("/your-recommendation", { state: data });
+                    }, 3000);
+                }}
+                >get rec!</button>
         </div>
     )
 }
