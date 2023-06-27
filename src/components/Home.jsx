@@ -1,12 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { listSomeDataAPI } from "./api-adapter";
 import listData from "./";
+import { db } from "./firebase-config";
+import { collection, getDocs } from "firebase/firestore";
+
+//THERE IS AN EQUALTO FUNCTION INCLUDED IN FIRBASE IF YOU WANT TO QUERY, SO KEEP THAT IN MIND!!!
 
 const Home = () => {
-    const [theData, setTheData] = useState([]);
+    // const [theData, setTheData] = useState([]);
+    const [books, setBooks] = useState([]);
+
+    const booksCollectionRef = collection(db, "romance-books");
+
     const [categories, setCategories] = useState([]);
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const getBooks = async() => {
+           const data = await getDocs(booksCollectionRef);
+           setBooks(data.docs.map((doc) => ({...doc.data(), id: doc.id}) ))
+           console.log(data); 
+        //    console.log(books);
+        }
+
+        getBooks();
+    }, [])
 
     const getTheData = async() => {
         const response = await listSomeDataAPI(["contemporary", "dark", "romance"]);
@@ -58,6 +77,18 @@ const Home = () => {
         <button onClick={() => {
             navigate("/choose-categories")
         }}>see more!</button>
+
+        <div>
+            {
+                books.map((book) => {
+                    return <div>
+                        <h1>title: {book.title}</h1>
+                        <h1> author: {book.author}</h1>
+                        <p> description: {book.description}</p>
+                    </div>
+                })
+            }
+        </div>
 
         </div>
     )
