@@ -11,7 +11,7 @@ const Home = () => {
     // const [theData, setTheData] = useState([]);
     const [books, setBooks] = useState([]);
 
-    const booksCollectionRef = collection(db, "romance-books");
+    const booksCollectionRef = collection(db, "romance");
 
     const [categories, setCategories] = useState([]);
     const navigate = useNavigate();
@@ -85,6 +85,7 @@ const Home = () => {
                         <h1>title: {book.title}</h1>
                         <h1> author: {book.author}</h1>
                         <p> description: {book.description}</p>
+                        <img src={book.coverURL} alt={`cover of book ` + book.title} />
                     </div>
                 })
             }
