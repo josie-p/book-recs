@@ -11,13 +11,13 @@ const ChooseCategories = () => {
             <div>
                 {/* this is where all of the initial, broad subjects are being listed and linked to. */}
                 <Link to="/fantasy-test"><button>Fantasy</button></Link>
-                <Link to="/fiction"><button>Fiction</button></Link>
-                <Link to="/graphic-novel"><button>Graphic Novel</button></Link>
+                {/* <Link to="/fiction"><button>Fiction</button></Link> */}
+                {/* <Link to="/graphic-novel"><button>Graphic Novel</button></Link> */}
                 <Link to="/mystery"><button>Mystery</button></Link>
                 <Link to="/nonfiction"><button>Nonfiction</button></Link>
                 <Link to="/romance"><button>Romance</button></Link>
                 <Link to="/science-fiction"><button>Science Fiction</button></Link>
-                <Link to="/ya"><button>Young Adult Fiction</button></Link>
+                {/* <Link to="/ya"><button>Young Adult Fiction</button></Link> */}
                 {console.log(genres, "genres array")}
             </div>
         </div>

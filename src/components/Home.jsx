@@ -11,7 +11,7 @@ const Home = () => {
     // const [theData, setTheData] = useState([]);
     const [books, setBooks] = useState([]);
 
-    const booksCollectionRef = collection(db, "romance");
+    const booksCollectionRef = collection(db, "fantasy");
 
     const [categories, setCategories] = useState([]);
     const navigate = useNavigate();
