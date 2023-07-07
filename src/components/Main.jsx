@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Navbar, Home, ChooseCategories, Romance, FinalRec, Fantasy, FantasyTest } from "./";
+import { Navbar, Home, ChooseCategories, Romance, FinalRec, Fantasy, FantasyTest, Contact, finalTest } from "./";
 
 const Main = () => {
     return(
@@ -19,6 +19,8 @@ const Main = () => {
                 <Route exact path="/fantasy" element={<Fantasy/>} />
                 <Route exact path="/fantasy-test" element={<FantasyTest/>} />
                 <Route exact path="/your-recommendation" element={< FinalRec/>}/>
+                <Route exact path="/contact" element={ <Contact/> } />
+                <Route exact path="/finalTest" element={ <finalTest/> } />
             </Routes>
         </div>
     )

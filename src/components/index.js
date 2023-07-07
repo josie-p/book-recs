@@ -15,4 +15,6 @@ export { default as Nonfiction } from "./Nonfiction";
 export { default as Romance } from "./Romance";
 export { default as SciFi } from "./SciFi";
 // export { default as YAFiction } from "./YAFiction";
-export { default as FantasyTest } from "./FantasyTest"; 
+export { default as FantasyTest } from "./FantasyTest";
+export { default as Contact } from "./Contact"; 
+export { default as finalTest } from "./finalTest";
